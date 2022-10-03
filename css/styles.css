@@ -31,6 +31,33 @@ body {
   overflow: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 0 15px;
+
+  outline: 2px dashed orange;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.no-gap {
+  display: block;
+}
+
 /* --------Верхня_лінія-------- */
 .logo {
   color: var(--logo-black-color);
@@ -88,17 +115,19 @@ body {
 /* <!--Герой--> */
 .hero {
   background-color: var(--footer-color);
+  text-align: center;
 }
 
 .hero-titel {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   color: var(--primary-bg-color);
+
+  margin-bottom: 30px;
 }
 
 .hero-button {
@@ -114,6 +143,11 @@ body {
   background-color: var(--accent-color);
 
   cursor: pointer;
+
+  border: transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 216px;
 }
 
 .hero-button:hover,
@@ -132,6 +166,8 @@ body {
   line-height: 1.14;
 
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
 
 .feature-description {
@@ -142,11 +178,17 @@ body {
 }
 
 /*  <!--Чим ми займаємося--> */
+.box.section {
+  padding-top: 0;
+}
+
 .box-titel {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+
+  margin-bottom: 50px;
 }
 
 .box-list {
@@ -156,12 +198,14 @@ body {
 /* <!--Наша команда--> */
 .team {
   background-color: var(--secondary-bg-color);
+  text-align: center;
 }
 
 .team-titel {
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
+
+  margin-bottom: 50px;
 }
 
 .team-list {
@@ -176,22 +220,28 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
+
+  margin-top: 30px;
 }
 
 .team-positions {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 
   color: var(--secondary-text-color);
+
+  margin-top: 10px;
 }
 
 /* <!-- Портфоліо --> */
 .filter-list,
 .portfolio-list {
   list-style: none;
+}
+
+.filter-list {
+  margin-bottom: 50px;
 }
 
 .filter-button {
@@ -206,6 +256,11 @@ body {
   background-color: var(--secondary-bg-color);
 
   cursor: pointer;
+
+  padding: 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+  min-width: 73px;
 }
 
 .filter-button:hover,
@@ -224,24 +279,29 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
+
+  margin-top: 20px;
 }
 .portfolio-description {
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondary-text-color);
+
+  margin-top: 4px;
 }
 
 /* -------------Підвал---------- */
-.footer .logo {
-  color: var(--primary-bg-color);
-}
-
 .footer {
   background-color: var(--footer-color);
 }
 
+.footer .logo {
+  color: var(--primary-bg-color);
+}
+
 .address {
   list-style: none;
+  margin-top: 20px;
 }
 
 .map,
