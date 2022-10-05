@@ -131,7 +131,7 @@ ul {
   margin-left: 50px;
 }
 
-.contacts-list {
+.contacts-link {
   display: block;
   padding: 32px 0;
 
@@ -144,10 +144,10 @@ ul {
   color: var(--secondary-text-color);
 }
 
-.nav-item:hover,
-.nav-item:focus,
-.contacts-item:hover,
-.contacts-item:focus {
+.nav-link:hover,
+.nav-link:focus,
+.contacts-link:hover,
+.contacts-link:focus {
   color: var(--accent-color);
 }
 
