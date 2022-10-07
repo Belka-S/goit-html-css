@@ -78,6 +78,8 @@ img {
 
 /* --------Верхня_лінія-------- */
 .top-line {
+  padding-top: 24px;
+  padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
 }
 
@@ -118,7 +120,8 @@ img {
 
 .nav-link {
   display: block;
-  padding: 32px 0;
+  padding-bottom: 7px;
+  padding-top: 8px;
 
   text-decoration: none;
   list-style: none;
@@ -148,7 +151,8 @@ img {
 
 .contacts-link {
   display: block;
-  padding: 32px 0;
+  padding-bottom: 7px;
+  padding-top: 8px;
 
   text-decoration: none;
 
