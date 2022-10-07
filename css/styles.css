@@ -348,15 +348,11 @@ ul {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-
-  margin-top: calc(-1 * var(--item-gap));
-  margin-left: calc(-1 * var(--item-gap));
+  gap: var(--item-gap);
 }
 
 .portfolio-item {
-  margin-top: var(--item-gap);
-  margin-left: var(--item-gap);
-  flex-basis: calc(100% / 3 - var(--item-gap));
+  flex-basis: calc((100% - 2 * var(--item-gap)) / 3);
   border: 1px solid #eeeeee;
 }
 
