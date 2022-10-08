@@ -179,7 +179,8 @@ img {
 }
 
 .hero-titel {
-  margin-bottom: 30px;
+  max-width: 696px;
+  margin: 0 auto 30px;
 
   font-weight: 900;
   font-size: 44px;
@@ -218,6 +219,7 @@ img {
 /* <!--Особливості--> */
 .feature-list {
   display: flex;
+  justify-content: space-between;
 
   list-style: none;
 }
@@ -238,11 +240,7 @@ img {
 }
 
 .feature-item {
-  flex-basis: calc((100% - 30px * 3) / 4);
-}
-
-.feature-item + .feature-item {
-  margin-left: 30px;
+  flex-basis: calc((100% - 3 * var(--item-gap)) / 4);
 }
 
 /*  <!--Чим ми займаємося--> */
@@ -261,17 +259,14 @@ img {
 
 .box-list {
   display: flex;
+  justify-content: space-between;
 
   list-style: none;
 }
 
 .box-item {
-  flex-basis: calc(((100% - var(--item-gap)) * 2) / 3);
+  flex-basis: calc(((100% - 2 * var(--item-gap))) / 3);
   max-width: 100%;
-}
-
-.box-item + .box-item {
-  margin-left: var(--item-gap);
 }
 
 /* <!--Наша команда--> */
@@ -290,23 +285,25 @@ img {
 
 .team-list {
   display: flex;
+  justify-content: space-between;
 
   list-style: none;
 }
 
 .team-item {
-  flex-basis: calc((100% - var(--item-gap) * 3) / 4);
+  flex-basis: calc((100% - 3 * var(--item-gap)) / 4);
   max-width: 100%;
 
   background-color: var(--primary-bg-color);
-}
 
-.team-item + .team-item {
-  margin-left: var(--item-gap);
+  border-radius: 0px 0px 4px 4px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-gap {
-  padding: 30px;
+  padding: var(--item-gap);
 }
 
 .team-members {
@@ -376,7 +373,6 @@ img {
   margin-top: var(--item-gap);
   margin-left: var(--item-gap);
   flex-basis: calc(100% / 3 - var(--item-gap));
-  border: 1px solid #eeeeee;
 }
 
 .portfolio-ref {
@@ -385,6 +381,10 @@ img {
 
 .portfolio-gap {
   padding: 20px 24px;
+
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 .portfolio-project {
   margin-bottom: 4px;
