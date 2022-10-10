@@ -334,16 +334,16 @@ img {
 }
 
 .antenna::before {
-  background-image: url(../images/feature-antenna.svg);
+  background-image: url(../images/svg/feature-antenna.svg);
 }
 .clock::before {
-  background-image: url(../images/feature-clock.svg);
+  background-image: url(../images/svg/feature-clock.svg);
 }
 .diagram::before {
-  background-image: url(../images/feature-diagram.svg);
+  background-image: url(../images/svg/feature-diagram.svg);
 }
 .astronaut::before {
-  background-image: url(../images/feature-astronaut.svg);
+  background-image: url(../images/svg/feature-astronaut.svg);
 }
 */
 
