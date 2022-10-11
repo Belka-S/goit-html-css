@@ -92,11 +92,13 @@ img {
   justify-content: center;
   width: 44px;
   height: 44px;
-  color: var(--icon-color);
   border-radius: 50%;
+  color: var(--icon-color);
 }
+
 .social-link.dark {
   background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-bg-color);
 }
 
 .social-link:hover,
@@ -111,14 +113,6 @@ img {
   fill: currentColor;
 }
 
-.dark > .social-icon {
-  fill: var(--primary-bg-color);
-}
-
-.social-icon:hover,
-.social-icon:focus {
-  fill: var(--primary-bg-color);
-}
 /* --------Верхня_лінія-------- */
 
 .top-line {
