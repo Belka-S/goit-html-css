@@ -786,7 +786,7 @@ img {
   transition: transform 250ms var(--timing-futction);
 }
 
-.is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -829,11 +829,11 @@ img {
   margin-bottom: 20px;
 }
 
-.modal__container label {
+.modal__label {
   margin-bottom: 4px;
 }
 
-.modal__container input {
+.modal__input {
   padding: 12px 12px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -841,8 +841,8 @@ img {
   transition: border-color 250ms var(--timing-futction);
 }
 
-.modal__container input:focus,
-.modal__container textarea:focus {
+.modal__input:focus,
+.modal__textarea:focus {
   outline: none;
   border-color: var(--accent-color);
 }
