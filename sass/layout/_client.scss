@@ -26,12 +26,12 @@
   border: 1px solid $icon-color;
   color: $icon-color;
   transition: color 250ms $timing-futction, border-color 250ms $timing-futction;
-}
 
-.client__link:hover,
-.client__link:focus {
-  border-color: $accent-color;
-  color: $accent-color;
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    color: $accent-color;
+  }
 }
 
 .client__icon {
