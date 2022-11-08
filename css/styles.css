@@ -13,13 +13,6 @@
   --timing-futction: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: var(--main-letter-spacing);
-}
-
 /* ----------RESET-UTILITY---------- */
 
 p,
@@ -69,6 +62,13 @@ img {
   overflow: hidden;
 }
 
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: var(--main-letter-spacing);
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -78,45 +78,6 @@ img {
 
 .section {
   padding: 94px 0;
-}
-
-/* ---------------Button--------------- */
-
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-
-  cursor: pointer;
-  border: transparent;
-  border-radius: 4px;
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-
-  transition: background-color 250ms var(--timing-futction), box-shadow 250ms var(--timing-futction);
-}
-
-.button:hover,
-.button:focus {
-  background-color: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.hero__button {
-  min-width: 216px;
-  margin: 0 auto;
-}
-
-.modal__button,
-.subscription__button {
-  min-width: 200px;
 }
 
 /* ----------------Logo---------------- */
@@ -139,6 +100,49 @@ img {
 
 .footer__logo {
   color: var(--primary-bg-color);
+}
+
+/* ---------------Button--------------- */
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  border: transparent;
+  border-radius: 4px;
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+
+  transition: background-color 250ms var(--timing-futction), box-shadow 250ms var(--timing-futction);
+}
+
+.button:hover,
+.button:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.button__icon {
+  margin-left: 10px;
+  fill: var(--primary-bg-color);
+}
+
+.hero__button {
+  min-width: 216px;
+  margin: 0 auto;
+}
+
+.modal__button,
+.subscription__button {
+  min-width: 200px;
 }
 
 /* ---------------Social--------------- */
@@ -324,7 +328,7 @@ img {
 
   text-align: center;
 
-  background-image: linear-gradient(to right, #2f303a66, #2f303a66), url(../images/business.jpg);
+  background-image: linear-gradient(to right, #2f303a66, #2f303a66), url(../images/hero.jpg);
   background-color: #c4c4c4;
   background-position: center;
   background-repeat: no-repeat;
@@ -387,11 +391,11 @@ img {
 
 /*  <!--Чим ми займаємося--> */
 
-.field {
+.occupation {
   padding-top: 0;
 }
 
-.field__titel {
+.occupation__titel {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -400,21 +404,21 @@ img {
   text-align: center;
 }
 
-.field__list {
+.occupation__list {
   display: flex;
 
   justify-content: space-between;
   list-style: none;
 }
 
-.field__item {
+.occupation__item {
   position: relative;
 
   flex-basis: calc(((100% - 2 * var(--item-gap))) / 3);
   max-width: 100%;
 }
 
-.field__issue {
+.occupation__issue {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -562,7 +566,6 @@ img {
   letter-spacing: inherit;
   text-align: center;
 
-  cursor: pointer;
   border: transparent;
   color: var(--primary-text-color);
   background-color: var(--secondary-bg-color);
@@ -749,11 +752,6 @@ img {
 .subscription_input:focus {
   border-color: var(--accent-color);
   color: var(--primary-bg-color);
-}
-
-.subscription__icon {
-  margin-left: 10px;
-  fill: var(--primary-bg-color);
 }
 
 /* <!-- Модальне вікно --> */
