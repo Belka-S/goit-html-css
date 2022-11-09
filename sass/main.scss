@@ -4,16 +4,16 @@
 @import './base/reset';
 @import './base/base';
 
-@import './components/modal';
-@import './components/logo';
-@import './components/button';
-@import './components/social';
-
+@import './layout/logo';
+@import './layout/social';
+@import './layout/buttons';
 @import './layout/header';
-@import './layout/hero';
-@import './layout/feature';
-@import './layout/oocupation';
-@import './layout/team';
-@import './layout/client';
-@import './layout/portfolio';
 @import './layout/footer';
+
+@import './modules/hero';
+@import './modules/feature';
+@import './modules/oocupation';
+@import './modules/team';
+@import './modules/client';
+@import './modules/portfolio';
+@import './modules/modal';

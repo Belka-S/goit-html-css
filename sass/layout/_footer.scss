@@ -9,8 +9,6 @@
 }
 
 .address {
-  margin-right: 70px;
-
   &__list {
     display: block;
     width: 231px;
@@ -55,7 +53,7 @@
 }
 
 .join {
-  margin-right: 93px;
+  margin-left: 70px;
 
   &__issue {
     @extend %issue;
@@ -63,6 +61,8 @@
 }
 
 .subscription {
+  margin-left: 93px;
+
   &__issue {
     @extend %issue;
   }
