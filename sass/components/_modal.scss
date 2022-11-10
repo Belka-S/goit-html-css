@@ -50,7 +50,6 @@
   }
 
   &__container {
-    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -72,26 +71,39 @@
     margin-bottom: 4px;
   }
 
+  &__wrap-input {
+    position: relative;
+  }
+
   &__input {
-    padding: 12px 12px 12px 42px;
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    transition: border-color 250ms $timing-futction;
-  }
+    font-size: 14px;
 
-  &__input:focus,
-  &__textarea:focus {
-    outline: none;
-    border-color: $accent-color;
+    transition: border-color 250ms $timing-futction;
+
+    &:focus {
+      outline: transparent;
+      border-color: $accent-color;
+    }
+
+    &:not(:focus):not(:placeholder-shown):invalid {
+      border-color: $alert-color;
+    }
   }
 
   &__input-icon {
     position: absolute;
-    bottom: 12px;
+    top: 50%;
     left: 12px;
     width: 18px;
     height: 18px;
+
+    transform: translateY(-50%);
 
     fill: $primary-text-color;
     transition: fill 250ms $timing-futction;
@@ -102,18 +114,30 @@
   }
 
   &__textarea {
+    height: 120px;
     resize: none;
     padding: 12px 16px;
 
+    font-size: 14px;
+
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    /* color: rgba(117, 117, 117, 0.5); */
+    // color: rgba(117, 117, 117, 0.5);
     transition: border-color 250ms $timing-futction;
+
+    &:focus {
+      outline: transparent;
+      border-color: $accent-color;
+    }
+
+    &::placeholder {
+      font-size: 12px;
+    }
   }
 
   &__checkbox {
     margin-bottom: 30px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
 
     white-space: pre;
@@ -127,17 +151,22 @@
     width: 16px;
     height: 15px;
     margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border: 1px solid $logo-black-color;
     border-radius: 2px;
     transition: border-color 250ms $timing-futction, background-color 250ms $timing-futction;
+    fill: transparent;
   }
 
   &__input:checked + &__chechkbox-icon {
-    background-origin: border-box;
-    background-image: url('../images/modal-checkbox.svg');
-    background-size: contain;
     background-color: $accent-color;
-    border-color: $accent-color;
+    border-color: transparent;
+    border: none;
+
+    fill: $primary-bg-color;
   }
 
   &__link {
