@@ -41,30 +41,19 @@
   }
 }
 
-%issue {
-  margin-bottom: 20px;
-
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-
-  color: $primary-bg-color;
-}
-
 .join {
   margin-left: 70px;
 
-  &__issue {
-    @extend %issue;
+  &__titel {
+    @include titel;
   }
 }
 
 .subscription {
   margin-left: 93px;
 
-  &__issue {
-    @extend %issue;
+  &__titel {
+    @include titel;
   }
 
   &__form {
