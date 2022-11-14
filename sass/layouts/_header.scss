@@ -1,0 +1,128 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__wrap {
+    display: flex;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    margin-left: 93px;
+
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    padding: 32px 0;
+    display: flex;
+
+    list-style: none;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    color: $primary-text-color;
+    transition: color 250ms $timing-futction;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+
+      width: 0;
+      height: 4px;
+      display: block;
+      content: '';
+      border-radius: 2px;
+
+      background-color: $accent-color;
+
+      transition: width 250ms $timing-futction;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      left: 0;
+      width: 100%;
+    }
+
+    &--current {
+      color: $accent-color;
+    }
+
+    &--current::after {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      height: 4px;
+      width: 100%;
+      display: block;
+      content: '';
+      transform: scale(1, 1);
+
+      background-color: $accent-color;
+      border-radius: 2px;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  margin-left: auto;
+
+  list-style: none;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    padding: 32px 0;
+    display: flex;
+
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    color: $secondary-text-color;
+    transition: color 250ms $timing-futction;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+
+    fill: currentColor;
+  }
+}
