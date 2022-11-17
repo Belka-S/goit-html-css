@@ -4,17 +4,33 @@
 
   &__container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    text-align: center;
     align-items: baseline;
+
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      text-align: left;
+    }
   }
 }
 
 .address {
   &__list {
     display: block;
-    width: 231px;
     margin-top: 20px;
 
     list-style: none;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 231px;
+    }
   }
 
   &__item:not(:last-child) {
@@ -42,7 +58,19 @@
 }
 
 .join {
-  margin-left: 70px;
+  width: 100%;
+  margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    margin-top: 0;
+    margin-left: $item-gap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+    margin-left: 70px;
+  }
 
   &__titel {
     @include titel;
@@ -50,20 +78,39 @@
 }
 
 .subscription {
-  margin-left: 93px;
+  margin-top: 60px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-left: 93px;
+    width: 100%;
+  }
 
   &__titel {
     @include titel;
   }
 
   &__form {
-    display: flex;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
 
   &_input {
-    margin-right: 12px;
+    margin-bottom: 20px;
     padding: 14px 16px;
-    min-width: 358px;
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-bottom: 0;
+      margin-right: 12px;
+    }
 
     font-size: 16px;
     line-height: 1.25;

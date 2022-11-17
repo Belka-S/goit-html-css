@@ -3,23 +3,30 @@
   text-align: center;
 
   &__titel {
-    margin-bottom: 50px;
+    margin-bottom: $item-gap;
 
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
+
     line-height: 1.17;
   }
 
   &__list {
+    gap: $item-gap;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
 
     list-style: none;
   }
 
   &__item {
-    flex-basis: calc((100% - 3 * $item-gap) / 4);
-    max-width: 100%;
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - $item-gap) / 2);
+    }
 
     border-radius: 0px 0px 4px 4px;
     background-color: $primary-bg-color;

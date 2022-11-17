@@ -16,3 +16,7 @@
 
   color: $primary-bg-color;
 }
+
+@mixin out {
+  outline: solid 1px red;
+}

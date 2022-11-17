@@ -42,6 +42,47 @@
             +38 096 111 11 11</a>
         </li>
       </ul>
+      <!-- Кнопка мобільного меню -->
+      <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-open>
+        <svg class="menu-button__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+          <use class="menu-button__icon-open" href="./images/sprite.svg#header-menu"></use>
+        </svg>
+      </button>
+    </div>
+    <!-- Сторінка мобільного меню -->
+    <div class="menu-container" id="menu-container" data-menu>
+      <button type="button" class="menu-button menu-button--close" aria-expanded="false" aria-controls="menu-container"
+        data-menu-close>
+        <svg class="menu-button__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+          <use class="menu-button__icon-close" href="./images/sprite.svg#header-close"></use>
+        </svg>
+      </button>
+      <nav class="nav-mob">
+        <ul class="nav-mob__list">
+          <li class="nav-mob__item"><a class="nav-mob__link nav-mob__link--current" href="./index.html">Студія</a></li>
+          <li class="nav-mob__item"><a class="nav-mob__link" href="./portfolio.html">Портфоліо</a></li>
+          <li class="nav-mob__item"><a class="nav-mob__link" href="">Контакти</a></li>
+        </ul>
+      </nav>
+      <ul class="contacts-mob">
+        <li class="contacts-mob__item"><a class="contacts-mob__link" href="tel:+380961111111" aria-label="Phone">+38 096
+            111 11 11</a>
+        </li>
+        <li class="contacts-mob__item"><a class="contacts-mob__link" href="mailto:info@devstudio.com"
+            aria-label="Mail">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="social-mob">
+        <li class="social-mob__item"><a class="social-mob__link" href="#"
+            rel="noopener noreferrer nofollow">Instagram</a></li>
+        <li class="social-mob__item"><a class="social-mob__link" href="#" rel="noopener noreferrer nofollow">Twitter</a>
+        </li>
+        <li class="social-mob__item"><a class="social-mob__link" href="#"
+            rel="noopener noreferrer nofollow">Facebook</a></li>
+        <li class="social-mob__item"><a class="social-mob__link" href="#"
+            rel="noopener noreferrer nofollow">LinkedIn</a></li>
+      </ul>
+    </div>
     </div>
   </header>
   <main>
@@ -73,8 +114,7 @@
           </div>
           <h3 class="feature__issue">Пунктуальність</h3>
           <p class="feature__description">Завдання організації, особливо рамки і місце навчання кадрів
-            тягне у
-            себе.</p>
+            тягне у себе.</p>
         </li>
         <li class="feature__item">
           <div class="feature__wrapper">
@@ -124,7 +164,7 @@
         <h2 class="team__titel">Наша команда</h2>
         <ul class="team__list">
           <li class="team__item">
-            <img src="./images/teamcard-1.jpg" alt="Фото Ігор Дем'яненко" width="270">
+            <img src="./images/teamcard-1.jpg" alt="Фото Ігор Дем'яненко">
             <div class="team__wrap">
               <h3 class="team__member">Ігор Дем'яненко</h3>
               <p class="team__position">Product Designer</p>
@@ -165,7 +205,7 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/teamcard-2.jpg" alt="Фото Ольга Рєпіна" width="270">
+            <img src="./images/teamcard-2.jpg" alt="Фото Ольга Рєпіна">
             <div class="team__wrap">
               <h3 class="team__member">Ольга Рєпіна</h3>
               <p class="team__position">Frontend Developer</p>
@@ -206,7 +246,7 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/teamcard-3.jpg" alt="Фото Микола Тарасов" width="270">
+            <img src="./images/teamcard-3.jpg" alt="Фото Микола Тарасов">
             <div class="team__wrap">
               <h3 class="team__member">Микола Тарасов</h3>
               <p class="team__position">Marketing</p>
@@ -247,7 +287,7 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/teamcard-4.jpg" alt="Фото " width="270">
+            <img src="./images/teamcard-4.jpg" alt="Фото ">
             <div class="team__wrap">
               <h3 class="team__member">Михайло Єрмаков</h3>
               <p class="team__position">UI Designer</p>
@@ -290,57 +330,57 @@
         </ul>
       </div>
     </section>
+    <!-- Постійні клієнти -->
+    <section class="client section">
+      <div class="container">
+        <h2 class="client__titel">Постійні клієнти</h2>
+        <ul class="client__list">
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-3"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-4"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-5"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-6"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
-  <!-- Постійні клієнти -->
-  <section class="client section">
-    <div class="container">
-      <h2 class="client__titel">Постійні клієнти</h2>
-      <ul class="client__list">
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-1"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-2"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-3"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-4"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-5"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-6"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
   <!--Підвал-->
   <footer class="footer">
     <div class="container footer__container">
@@ -450,8 +490,6 @@
           <label class="modal__label" for="comment">Коментар</label>
           <textarea class="modal__textarea" name="comment" id="comment" placeholder="Введіть текст"></textarea>
         </div>
-
-
         <label class="modal__checkbox">
           <input class="modal__input visually-hidden" type="checkbox" name="agreement" value="agreement">
           <span class="modal__chechkbox-icon">
@@ -459,8 +497,7 @@
               <use href="./images/sprite.svg#modal-checkbox"></use>
             </svg>
           </span>
-          <span>Погоджуюся з розсилкою та приймаю </span>
-          <a class="modal__link" href="#">Умови договору</a>
+          <span>Погоджуюся з розсилкою та приймаю <a class="modal__link" href="#">Умови договору</a></span>
         </label>
         <button class="button modal__button" type="submit">Відправити</button>
       </form>
@@ -471,10 +508,13 @@
       </button>
     </div>
   </div>
-  <!-- Відкриття модального вікна -->
-  <script src="./js/modal.js"></script>
+
   <!-- Перевірка форм через консоль -->
   <script src="./js/form-check.js"></script>
+  <!-- Відкриття мобільного меню -->
+  <script src="./js/menu.js"></script>
+  <!-- Відкриття модального вікна -->
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>

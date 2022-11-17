@@ -1,14 +1,30 @@
 .portfolio__filter {
-  margin-bottom: 50px;
   display: flex;
-  justify-content: center;
+  column-gap: 8px;
+
+  @media screen and (max-width: 767px) {
+    max-width: 326px;
+    margin-bottom: 40px;
+    justify-content: start;
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 
   list-style: none;
 }
 
-.portfolio__filter-item:not(:first-child) {
-  margin-left: 8px;
-}
+// .portfolio__filter-item:not(:first-child) {
+//   margin-left: 8px;
+// }
 
 .portfolio__label {
   display: block;
@@ -58,7 +74,21 @@
 .portfolio__item {
   margin-top: $item-gap;
   margin-left: $item-gap;
-  flex-basis: calc(100% / 3 - $item-gap);
+
+  // Питання чи це не костиль
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    &:first-of-type .portfilio__wrap {
+      height: 146px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - $item-gap);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - $item-gap);
+  }
 }
 
 .portfolio__link {
@@ -77,6 +107,11 @@
   position: relative;
 
   overflow: hidden;
+
+  img {
+    // Убрать после вставки фото
+    width: 450px;
+  }
 }
 
 .portfolio__description {
