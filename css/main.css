@@ -449,7 +449,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    padding: 200px 0;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-tab-1x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tab-1x.jpg);
   }
@@ -618,6 +617,11 @@ body {
   font-size: 28px;
   line-height: 1.17;
 }
+@media screen and (min-width: 1200px) {
+  .team__titel {
+    font-size: 36px;
+  }
+}
 .team__list {
   gap: 30px;
   display: -webkit-box;
@@ -755,9 +759,11 @@ body {
   }
 }
 
+.address {
+  margin-top: 20px;
+}
 .address__list {
   display: block;
-  margin-top: 20px;
   list-style: none;
 }
 @media screen and (min-width: 768px) {
@@ -847,6 +853,11 @@ body {
     display: flex;
   }
 }
+@media screen and (min-width: 1200px) {
+  .subscription__label {
+    margin-right: 12px;
+  }
+}
 .subscription_input {
   margin-bottom: 20px;
   padding: 14px 16px;
@@ -865,9 +876,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .subscription_input {
+    margin-bottom: 0px;
     width: 358px;
-    margin-bottom: 0;
-    margin-right: 12px;
   }
 }
 .subscription_input:focus {
@@ -958,11 +968,6 @@ body {
   margin-top: 30px;
   margin-left: 30px;
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .portfolio__item:first-of-type .portfilio__wrap {
-    height: 146px;
-  }
-}
 @media screen and (min-width: 768px) {
   .portfolio__item {
     -ms-flex-preferred-size: calc(50% - 30px);
@@ -977,7 +982,14 @@ body {
 }
 
 .portfolio__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   text-decoration: none;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -993,9 +1005,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-.portfilio__img-wrap img {
-  width: 450px;
-}
 
 .portfolio__description {
   position: absolute;
@@ -1004,8 +1013,8 @@ body {
   width: 100%;
   height: 100%;
   padding: 24px;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1027,6 +1036,9 @@ body {
 }
 
 .portfilio__wrap {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -1046,6 +1058,11 @@ body {
   font-size: 16px;
   line-height: 1.88;
   color: #757575;
+}
+
+.contact__map {
+  width: 100vw;
+  height: 90vh;
 }
 
 .menu-container {

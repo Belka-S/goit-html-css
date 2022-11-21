@@ -18,10 +18,10 @@
 }
 
 .address {
+  margin-top: 20px;
+
   &__list {
     display: block;
-    margin-top: 20px;
-
     list-style: none;
 
     @media screen and (min-width: 768px) {
@@ -101,15 +101,20 @@
     }
   }
 
+  &__label {
+    @media screen and (min-width: 1200px) {
+      margin-right: 12px;
+    }
+  }
+
   &_input {
     margin-bottom: 20px;
     padding: 14px 16px;
     width: 100%;
 
     @media screen and (min-width: 1200px) {
+      margin-bottom: 0px;
       width: 358px;
-      margin-bottom: 0;
-      margin-right: 12px;
     }
 
     font-size: 16px;
