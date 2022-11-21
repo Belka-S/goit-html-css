@@ -1,4 +1,7 @@
 .contact {
+  &__titel {
+    display: none;
+  }
   &__map {
     width: 100vw;
     height: 90vh;

@@ -1060,6 +1060,9 @@ body {
   color: #757575;
 }
 
+.contact__titel {
+  display: none;
+}
 .contact__map {
   width: 100vw;
   height: 90vh;
