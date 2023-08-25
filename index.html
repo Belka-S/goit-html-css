@@ -14,6 +14,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
   <link rel="stylesheet" href="./css/main.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    integrity="sha256-r7Neol40GubQBzMKAJovEaXbl9FClnADCrIMPljlx3E=" crossorigin="anonymous">
 </head>
 
 <body>
@@ -25,7 +28,7 @@
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link nav__link--current" href="./index.html">Студія</a></li>
           <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфоліо</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Контакти</a></li>
+          <li class="nav__item"><a class="nav__link" href="./contacts.html">Контакти</a></li>
         </ul>
       </nav>
       <ul class="contacts">
@@ -41,6 +44,45 @@
             </svg>
             +38 096 111 11 11</a>
         </li>
+      </ul>
+      <!-- Кнопка мобільного меню -->
+      <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-open>
+        <svg class="menu-button__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+          <use class="menu-button__icon-open" href="./images/sprite.svg#header-menu"></use>
+        </svg>
+      </button>
+    </div>
+    <!-- Сторінка мобільного меню -->
+    <div class="menu-container" id="menu-container" data-menu>
+      <button type="button" class="menu-button menu-button--close" data-menu-close>
+        <svg class="menu-button__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+          <use class="menu-button__icon-close" href="./images/sprite.svg#header-close"></use>
+        </svg>
+      </button>
+      <nav class="nav-mob">
+        <ul class="nav-mob__list">
+          <li class="nav-mob__item"><a class="nav-mob__link nav-mob__link--current" href="./index.html">Студія</a></li>
+          <li class="nav-mob__item"><a class="nav-mob__link" href="./portfolio.html">Портфоліо</a></li>
+          <li class="nav-mob__item"><a class="nav-mob__link" href="./contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+      <ul class="contacts-mob">
+        <li class="contacts-mob__item"><a class="contacts-mob__link" href="tel:+380961111111" aria-label="Phone">+38 096
+            111 11 11</a>
+        </li>
+        <li class="contacts-mob__item"><a class="contacts-mob__link" href="mailto:info@devstudio.com"
+            aria-label="Mail">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="social-mob">
+        <li class="social-mob__item"><a class="social-mob__link" href="#"
+            rel="noopener noreferrer nofollow">Instagram</a></li>
+        <li class="social-mob__item"><a class="social-mob__link" href="#" rel="noopener noreferrer nofollow">Twitter</a>
+        </li>
+        <li class="social-mob__item"><a class="social-mob__link" href="#"
+            rel="noopener noreferrer nofollow">Facebook</a></li>
+        <li class="social-mob__item"><a class="social-mob__link" href="#"
+            rel="noopener noreferrer nofollow">LinkedIn</a></li>
       </ul>
     </div>
   </header>
@@ -73,8 +115,7 @@
           </div>
           <h3 class="feature__issue">Пунктуальність</h3>
           <p class="feature__description">Завдання організації, особливо рамки і місце навчання кадрів
-            тягне у
-            себе.</p>
+            тягне у себе.</p>
         </li>
         <li class="feature__item">
           <div class="feature__wrapper">
@@ -105,15 +146,27 @@
         <ul class="occupation__list">
           <li class="occupation__item">
             <h3 class="occupation__issue">Десктопні додатки</h3>
-            <img src="./images/ocupation-1.jpg" alt="Десктопний ПК" width="370">
+            <picture>
+              <source srcset="./images/ocupation-1-desk-1x.jpg 1x,
+                          ./images/ocupation-1-desk-2x.jpg 2x" media="(min-width: 1200px)">
+              <img src="./images/ocupation-1-desk.jpg" alt="Фото десктоп" width="370">
+            </picture>
           </li>
           <li class="occupation__item">
             <h3 class="occupation__issue">Мобільні додатки</h3>
-            <img src="./images/ocupation-2.jpg" alt="Мобільний телефон" width="370">
+            <picture>
+              <source srcset="./images/ocupation-2-desk-1x.jpg 1x,
+              ./images/ocupation-2-desk-2x.jpg 2x" media="(min-width: 1200px)">
+              <img src="./images/ocupation-2-desk.jpg" alt="Фото смартфон" width="370">
+            </picture>
           </li>
           <li class="occupation__item">
             <h3 class="occupation__issue">Дизайнерські рішення</h3>
-            <img src="./images/ocupation-3.jpg" alt="Абстракція на планшеті" width="370">
+            <picture>
+              <source srcset="./images/ocupation-3-desk-1x.jpg 1x,
+                          ./images/ocupation-3-desk-2x.jpg 2x" media="(min-width: 1200px)">
+              <img src="./images/ocupation-3-desk.jpg" alt="Фото планшет" width="370">
+            </picture>
           </li>
         </ul>
       </div>
@@ -124,7 +177,15 @@
         <h2 class="team__titel">Наша команда</h2>
         <ul class="team__list">
           <li class="team__item">
-            <img src="./images/teamcard-1.jpg" alt="Фото Ігор Дем'яненко" width="270">
+            <picture>
+              <source srcset="./images/teamcard-1-desk-1x.jpg 1x,
+                          ./images/teamcard-1-desk-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/teamcard-1-tab-1x.jpg 1x,
+                          ./images/teamcard-1-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/teamcard-1-mob-1x.jpg 1x,
+                          ./images/teamcard-1-mob-2x.jpg 2x" media="(max-width: 767px)">
+              <img src="./images/teamcard-1-desk.jpg" alt="Фото Ігор Дем'яненко" width="450">
+            </picture>
             <div class="team__wrap">
               <h3 class="team__member">Ігор Дем'яненко</h3>
               <p class="team__position">Product Designer</p>
@@ -165,7 +226,15 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/teamcard-2.jpg" alt="Фото Ольга Рєпіна" width="270">
+            <picture>
+              <source srcset="./images/teamcard-2-desk-1x.jpg 1x,
+                                ./images/teamcard-2-desk-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/teamcard-2-tab-1x.jpg 1x,
+                                ./images/teamcard-2-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/teamcard-2-mob-1x.jpg 1x,
+                                ./images/teamcard-2-mob-2x.jpg 2x" media="(max-width: 767px)">
+              <img src="./images/teamcard-2-desk.jpg" alt="Фото Ольга Рєпіна" width="450">
+            </picture>
             <div class="team__wrap">
               <h3 class="team__member">Ольга Рєпіна</h3>
               <p class="team__position">Frontend Developer</p>
@@ -206,7 +275,15 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/teamcard-3.jpg" alt="Фото Микола Тарасов" width="270">
+            <picture>
+              <source srcset="./images/teamcard-3-desk-1x.jpg 1x,
+                                ./images/teamcard-3-desk-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/teamcard-3-tab-1x.jpg 1x,
+                                ./images/teamcard-3-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/teamcard-3-mob-1x.jpg 1x,
+                                ./images/teamcard-3-mob-2x.jpg 2x" media="(max-width: 767px)">
+              <img src="./images/teamcard-3-desk.jpg" alt="Фото Микола Тарасов" width="450">
+            </picture>
             <div class="team__wrap">
               <h3 class="team__member">Микола Тарасов</h3>
               <p class="team__position">Marketing</p>
@@ -247,7 +324,15 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/teamcard-4.jpg" alt="Фото " width="270">
+            <picture>
+              <source srcset="./images/teamcard-4-desk-1x.jpg 1x,
+                                ./images/teamcard-4-desk-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/teamcard-4-tab-1x.jpg 1x,
+                                ./images/teamcard-4-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/teamcard-4-mob-1x.jpg 1x,
+                                ./images/teamcard-4-mob-2x.jpg 2x" media="(max-width: 767px)">
+              <img src="./images/teamcard-4-desk.jpg" alt="Фото Михайло Єрмаков" width="450">
+            </picture>
             <div class="team__wrap">
               <h3 class="team__member">Михайло Єрмаков</h3>
               <p class="team__position">UI Designer</p>
@@ -290,57 +375,57 @@
         </ul>
       </div>
     </section>
+    <!-- Постійні клієнти -->
+    <section class="client section">
+      <div class="container">
+        <h2 class="client__titel">Постійні клієнти</h2>
+        <ul class="client__list">
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-3"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-4"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-5"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client__item">
+            <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
+              <svg class="client__icon">
+                <use href="./images/sprite.svg#client-6"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
-  <!-- Постійні клієнти -->
-  <section class="client section">
-    <div class="container">
-      <h2 class="client__titel">Постійні клієнти</h2>
-      <ul class="client__list">
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-1"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-2"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-3"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-4"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-5"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="client__link" href="#" target="_blank" rel="noopener noreferrer nofollow" aria-label="Client">
-            <svg class="client__icon">
-              <use href="./images/sprite.svg#client-6"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
   <!--Підвал-->
   <footer class="footer">
     <div class="container footer__container">
@@ -401,8 +486,8 @@
       <div class="subscription">
         <p class="subscription__titel">Підпишіться на розсилку</p>
         <form class="subscription__form js-speaker-form">
-          <label>
-            <input class="subscription_input" type="email" name="email" placeholder="E-mail" autocomplete="off">
+          <label class="subscription__label">
+            <input class="subscription__input" type="email" name="email" placeholder="E-mail" autocomplete="off">
           </label>
           <button class="button subscription__button" type="submit">Підписатися
             <svg class="button__icon" width="24" height="24">
@@ -450,8 +535,6 @@
           <label class="modal__label" for="comment">Коментар</label>
           <textarea class="modal__textarea" name="comment" id="comment" placeholder="Введіть текст"></textarea>
         </div>
-
-
         <label class="modal__checkbox">
           <input class="modal__input visually-hidden" type="checkbox" name="agreement" value="agreement">
           <span class="modal__chechkbox-icon">
@@ -459,8 +542,7 @@
               <use href="./images/sprite.svg#modal-checkbox"></use>
             </svg>
           </span>
-          <span>Погоджуюся з розсилкою та приймаю </span>
-          <a class="modal__link" href="#">Умови договору</a>
+          <span>Погоджуюся з розсилкою та приймаю <a class="modal__link" href="#">Умови договору</a></span>
         </label>
         <button class="button modal__button" type="submit">Відправити</button>
       </form>
@@ -471,10 +553,15 @@
       </button>
     </div>
   </div>
+
+  <!-- Відкриття мобільного меню -->
+  <script src="./js/mob-menu.js" type="module"></script>
   <!-- Відкриття модального вікна -->
-  <script src="./js/modal.js"></script>
-  <!-- Перевірка форм через консоль -->
-  <script src="./js/form-check.js"></script>
+  <script src="./js/modal.js" type="module"></script>
+  <!-- Галерея basicLightbox -->
+  <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"
+    integrity="sha256-nMn34BfOxpKD0GwV5nZMwdS4e8SI8Ekz+G7dLeGE4XY=" crossorigin="anonymous"></script>
+  <script src="./js/lightbox.js" type="module"></script>
 </body>
 
 </html>

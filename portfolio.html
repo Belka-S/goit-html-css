@@ -25,7 +25,7 @@
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="./index.html">Студія</a></li>
           <li class="nav__item"><a class="nav__link nav__link--current" href="./portfolio.html">Портфоліо</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Контакти</a></li>
+          <li class="nav__item"><a class="nav__link" href="./contacts.html">Контакти</a></li>
         </ul>
       </nav>
       <ul class="contacts">
@@ -40,6 +40,50 @@
               <use href="./images/sprite.svg#contact-phone"></use>
             </svg>
             +38 096 111 11 11</a>
+        </li>
+      </ul>
+      <!-- Кнопка мобільного меню -->
+      <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-open>
+        <svg class="menu-button__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+          <use class="menu-button__icon-open" href="./images/sprite.svg#header-menu"></use>
+        </svg>
+      </button>
+    </div>
+    <!-- Сторінка мобільного меню -->
+    <div class="menu-container" id="menu-container" data-menu>
+      <button type="button" class="menu-button menu-button--close" aria-expanded="false" aria-controls="menu-container"
+        data-menu-close>
+        <svg class="menu-button__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+          <use class="menu-button__icon-close" href="./images/sprite.svg#header-close"></use>
+        </svg>
+      </button>
+      <nav class="nav-mob">
+        <ul class="nav-mob__list">
+          <li class="nav-mob__item"><a class="nav-mob__link" href="./index.html">Студія</a></li>
+          <li class="nav-mob__item"><a class="nav-mob__link nav-mob__link--current"
+              href="./portfolio.html">Портфоліо</a></li>
+          <li class="nav-mob__item"><a class="nav-mob__link" href="./contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+      <ul class="contacts-mob">
+        <li class="contacts-mob__item"><a class="contacts-mob__link" href="tel:+380961111111" aria-label="Phone">+38 096
+            111 11 11</a>
+        </li>
+        <li class="contacts-mob__item"><a class="contacts-mob__link" href="mailto:info@devstudio.com"
+            aria-label="Mail">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="social-mob">
+        <li class="social-mob__item"><a class="social-mob__link" href="#"
+            rel="noopener noreferrer nofollow">Instagram</a>
+        </li>
+        <li class="social-mob__item"><a class="social-mob__link" href="#" rel="noopener noreferrer nofollow">Twitter</a>
+        </li>
+        <li class="social-mob__item"><a class="social-mob__link" href="#"
+            rel="noopener noreferrer nofollow">Facebook</a>
+        </li>
+        <li class="social-mob__item"><a class="social-mob__link" href="#"
+            rel="noopener noreferrer nofollow">LinkedIn</a>
         </li>
       </ul>
     </div>
@@ -70,17 +114,20 @@
             <input class="portfolio__input visually-hidden" type="radio" id="marketing" name="portfolio-radio">
             <label class="portfolio__label" for="marketing">Маркетинг</label>
           </li>
-          <!-- <li class="portfolio__filter-item"><button class="portfolio__button" type="button"> Усі</button></li>
-          <li class="portfolio__filter-item"><button class="portfolio__button" type="button"> Веб-сайти</button></li>
-          <li class="portfolio__filter-item"><button class="portfolio__button" type="button"> Додатки</button></li>
-          <li class="portfolio__filter-item"><button class="portfolio__button" type="button"> Дизайн</button></li>
-          <li class="portfolio__filter-item"><button class="portfolio__button" type="button"> Маркетинг</button></li> -->
         </ul>
         <ul class="portfolio__set">
           <li class="portfolio__item">
-            <a class="portfolio__link" href="#">
+            <a class="portfolio__link" data-filter="web" href="#">
               <div class="portfilio__img-wrap">
-                <img src="./images/portfolio-1.jpg" alt="portfolio" width="370">
+                <picture>
+                  <source srcset="./images/portfolio-1-desk-1x.jpg 1x,
+                  ./images/portfolio-1-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./images/portfolio-1-tab-1x.jpg 1x,
+                  ./images/portfolio-1-tab-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-1-mob-1x.jpg 1x,
+                  ./images/portfolio-1-mob-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/portfolio-1-desk.jpg" alt="portfolio" width="450">
+                </picture>
                 <p class="portfolio__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
@@ -93,22 +140,40 @@
             </a>
           </li>
           <li class="portfolio__item">
-            <a class="portfolio__link" href="#">
+            <a class="portfolio__link" data-filter="design" href="#">
               <div class="portfilio__img-wrap">
-                <img src="./images/portfolio-2.jpg" alt="portfolio" width="370">
-                <p class="portfolio__description">window</p>
+                <picture>
+                  <source srcset="./images/portfolio-2-desk-1x.jpg 1x,
+                  ./images/portfolio-2-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./images/portfolio-2-tab-1x.jpg 1x,
+                  ./images/portfolio-2-tab-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-2-mob-1x.jpg 1x,
+                  ./images/portfolio-2-mob-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/portfolio-2-desk.jpg" alt="portfolio" width="450">
+                </picture>
+                <p class="portfolio__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                  сервісів.</p>
               </div>
               <div class="portfilio__wrap">
-                <h2 class="portfolio__project">Постер New Orlean vs Golden Star</h2>
+                <h2 class="portfolio__project">Постер New Orlean vs Golden State</h2>
                 <p class="portfolio__type">Дизайн</p>
               </div>
             </a>
           </li>
           <li class="portfolio__item">
-            <a class="portfolio__link" href="#">
+            <a class="portfolio__link" data-filter="addon" href="#">
               <div class="portfilio__img-wrap">
-                <img src="./images/portfolio-3.jpg" alt="portfolio" width="370">
-                <p class="portfolio__description">window</p>
+                <picture>
+                  <source srcset="./images/portfolio-3-desk-1x.jpg 1x,
+                  ./images/portfolio-3-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./images/portfolio-3-tab-1x.jpg 1x,
+                  ./images/portfolio-3-tab-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-3-mob-1x.jpg 1x,
+                  ./images/portfolio-3-mob-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/portfolio-3-desk.jpg" alt="portfolio" width="450">
+                </picture>
+                <p class="portfolio__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                  сервісів.</p>
               </div>
               <div class="portfilio__wrap">
                 <h2 class="portfolio__project">Ресторан Seafood</h2>
@@ -117,10 +182,19 @@
             </a>
           </li>
           <li class="portfolio__item">
-            <a class="portfolio__link" href="#">
+            <a class="portfolio__link" data-filter="marketing" href="#">
               <div class="portfilio__img-wrap">
-                <img src="./images/portfolio-4.jpg" alt="portfolio" width="370">
-                <p class="portfolio__description">window</p>
+                <picture>
+                  <source srcset="./images/portfolio-4-desk-1x.jpg 1x,
+                  ./images/portfolio-4-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./images/portfolio-4-tab-1x.jpg 1x,
+                  ./images/portfolio-4-tab-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-4-mob-1x.jpg 1x,
+                  ./images/portfolio-4-mob-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/portfolio-4-desk.jpg" alt="portfolio" width="450">
+                </picture>
+                <p class="portfolio__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                  сервісів.</p>
               </div>
               <div class="portfilio__wrap">
                 <h2 class="portfolio__project">Проєкт Prime</h2>
@@ -129,10 +203,19 @@
             </a>
           </li>
           <li class="portfolio__item">
-            <a class="portfolio__link" href="#">
+            <a class="portfolio__link" data-filter="addon" href="#">
               <div class="portfilio__img-wrap">
-                <img src="./images/portfolio-5.jpg" alt="portfolio" width="370">
-                <p class="portfolio__description">window</p>
+                <picture>
+                  <source srcset="./images/portfolio-5-desk-1x.jpg 1x,
+                  ./images/portfolio-5-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./images/portfolio-5-tab-1x.jpg 1x,
+                  ./images/portfolio-5-tab-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-5-mob-1x.jpg 1x,
+                  ./images/portfolio-5-mob-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/portfolio-5-desk.jpg" alt="portfolio" width="450">
+                </picture>
+                <p class="portfolio__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                  сервісів.</p>
               </div>
               <div class="portfilio__wrap">
                 <h2 class="portfolio__project">Проєкт Boxes</h2>
@@ -141,10 +224,19 @@
             </a>
           </li>
           <li class="portfolio__item">
-            <a class="portfolio__link" href="#">
+            <a class="portfolio__link" data-filter="web" href="#">
               <div class="portfilio__img-wrap">
-                <img src="./images/portfolio-6.jpg" alt="portfolio" width="370">
-                <p class="portfolio__description">window</p>
+                <picture>
+                  <source srcset="./images/portfolio-6-desk-1x.jpg 1x,
+                  ./images/portfolio-6-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./images/portfolio-6-tab-1x.jpg 1x,
+                  ./images/portfolio-6-tab-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-6-mob-1x.jpg 1x,
+                  ./images/portfolio-6-mob-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/portfolio-6-desk.jpg" alt="portfolio" width="450">
+                </picture>
+                <p class="portfolio__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                  сервісів.</p>
               </div>
               <div class="portfilio__wrap">
                 <h2 class="portfolio__project">Inspiration has no Borders</h2>
@@ -153,10 +245,19 @@
             </a>
           </li>
           <li class="portfolio__item">
-            <a class="portfolio__link" href="#">
+            <a class="portfolio__link" data-filter="design" href="#">
               <div class="portfilio__img-wrap">
-                <img src="./images/portfolio-7.jpg" alt="portfolio" width="370">
-                <p class="portfolio__description">window</p>
+                <picture>
+                  <source srcset="./images/portfolio-7-desk-1x.jpg 1x,
+                  ./images/portfolio-7-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./images/portfolio-7-tab-1x.jpg 1x,
+                  ./images/portfolio-7-tab-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-7-mob-1x.jpg 1x,
+                  ./images/portfolio-7-mob-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/portfolio-7-desk.jpg" alt="portfolio" width="450">
+                </picture>
+                <p class="portfolio__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                  сервісів.</p>
               </div>
               <div class="portfilio__wrap">
                 <h2 class="portfolio__project">Видання Limited Edition</h2>
@@ -165,10 +266,19 @@
             </a>
           </li>
           <li class="portfolio__item">
-            <a class="portfolio__link" href="#">
+            <a class="portfolio__link" data-filter="marketing" href="#">
               <div class="portfilio__img-wrap">
-                <img src="./images/portfolio-8.jpg" alt="portfolio" width="370">
-                <p class="portfolio__description">window</p>
+                <picture>
+                  <source srcset="./images/portfolio-8-desk-1x.jpg 1x,
+                  ./images/portfolio-8-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./images/portfolio-8-tab-1x.jpg 1x,
+                  ./images/portfolio-8-tab-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-8-mob-1x.jpg 1x,
+                  ./images/portfolio-8-mob-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/portfolio-8-desk.jpg" alt="portfolio" width="450">
+                </picture>
+                <p class="portfolio__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                  сервісів.</p>
               </div>
               <div class="portfilio__wrap">
                 <h2 class="portfolio__project">Проєкт LAB</h2>
@@ -177,10 +287,19 @@
             </a>
           </li>
           <li class="portfolio__item">
-            <a class="portfolio__link" href="#">
+            <a class="portfolio__link" data-filter="addon" href="#">
               <div class="portfilio__img-wrap">
-                <img src="./images/portfolio-9.jpg" alt="portfolio" width="370">
-                <p class="portfolio__description">window</p>
+                <picture>
+                  <source srcset="./images/portfolio-9-desk-1x.jpg 1x,
+                  ./images/portfolio-9-desk-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./images/portfolio-9-tab-1x.jpg 1x,
+                  ./images/portfolio-9-tab-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-9-mob-1x.jpg 1x,
+                  ./images/portfolio-9-mob-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/portfolio-9-desk.jpg" alt="portfolio" width="450">
+                </picture>
+                <p class="portfolio__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                  сервісів.</p>
               </div>
               <div class="portfilio__wrap">
                 <h2 class="portfolio__project">Growing Business</h2>
@@ -213,7 +332,7 @@
         </address>
       </div>
       <div class="join">
-        <p class="join__issue">Приєднуйтесь</p>
+        <p class="join__titel">Приєднуйтесь</p>
         <ul class="social">
           <li class="social__item">
             <a class="social__link join__social" href="#" target="_blank" rel="noopener noreferrer nofollow"
@@ -250,10 +369,10 @@
         </ul>
       </div>
       <div class="subscription">
-        <p class="subscription__issue">Підпишіться на розсилку</p>
+        <p class="subscription__titel">Підпишіться на розсилку</p>
         <form class="subscription__form js-speaker-form">
-          <label>
-            <input class="subscription_input" type="email" name="email" placeholder="E-mail" autocomplete="off">
+          <label class="subscription__label">
+            <input class="subscription__input" type="email" name="email" placeholder="E-mail" autocomplete="off">
           </label>
           <button class="button subscription__button" type="submit">Підписатися
             <svg class="button__icon" width="24" height="24">
@@ -264,6 +383,10 @@
       </div>
     </div>
   </footer>
+  <!-- Відкриття мобільного меню -->
+  <script src="./js/mob-menu.js" type="module"></script>
+  <!-- Фільтр -->
+  <script src="./js/filter.js" type="module"></script>
 </body>
 
 </html>

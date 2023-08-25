@@ -21,9 +21,19 @@
   top: 50%;
   left: 50%;
 
-  width: 528px;
-  height: 581px;
+  width: calc(100% - 2 * 15px);
+  min-height: 609px;
   padding: 40px;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+
   transform: translate(-50%, -50%) scale(1, 1);
 
   border-radius: 4px;
@@ -140,8 +150,15 @@
     display: flex;
     align-items: center;
 
-    white-space: pre;
-    font-size: 14px;
+    align-self: flex-start;
+    white-space: pre-wrap;
+    font-size: 12px;
+
+    @media screen and (min-width:1200px) {
+      align-self: center;
+      font-size: 14px;
+    }
+
     line-height: 1.71;
     letter-spacing: $main-letter-spacing;
     color: $secondary-text-color;
