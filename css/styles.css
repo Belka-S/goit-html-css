@@ -7,15 +7,17 @@
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --logo-black-color: #000000;
   --accent-color: #2196f3;
-  --main-font: 'Roboto', sans-serif;
   --main-letter-spacing: 0.03em;
+  --item-gap: 30px;
 }
 body {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
-  font-family: var(--main-font);
+  font-family: 'Roboto', sans-serif;
   letter-spacing: var(--main-letter-spacing);
 }
+
+/* ----------УТИЛІТИ---------- */
 
 .visually-hidden {
   position: absolute;
@@ -31,7 +33,49 @@ body {
   overflow: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.no-gap {
+  display: block;
+  max-width: 100%;
+}
+
 /* --------Верхня_лінія-------- */
+.top-line {
+  border-bottom: 1px solid #ececec;
+}
+
+.header {
+  display: flex;
+}
+
+.main-nav {
+  display: flex;
+
+  align-items: center;
+}
+
 .logo {
   color: var(--logo-black-color);
   text-decoration: none;
@@ -46,55 +90,81 @@ body {
   color: var(--accent-color);
 }
 
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+
+  list-style: none;
+}
+
+.nav-item + .nav-item {
+  margin-left: 50px;
+}
+
+.nav-link {
+  display: block;
+  padding: 32px 0;
+
+  text-decoration: none;
+  list-style: none;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
 .site-nav .current {
   color: var(--accent-color);
 }
 
-.site-nav,
 .contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
   list-style: none;
 }
 
-.nav-item:hover,
-.nav-item:focus,
-.contacts-item:hover,
-.contacts-item:focus {
-  color: var(--accent-color);
+.contacts-item + .contacts-item {
+  margin-left: 50px;
 }
 
-.nav-item {
-  text-decoration: none;
-  list-style: none;
+.contacts-link {
+  display: block;
+  padding: 32px 0;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-
-  color: var(--primary-text-color);
-}
-
-.contacts-item {
   text-decoration: none;
 
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: var(--secondary-text-color);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
 }
 
 /* <!--Герой--> */
 .hero {
+  padding: 200px 0;
+
   background-color: var(--footer-color);
+  text-align: center;
 }
 
 .hero-titel {
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
@@ -102,6 +172,11 @@ body {
 }
 
 .hero-button {
+  border: transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 216px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -123,26 +198,42 @@ body {
 
 /* <!--Особливості--> */
 .feature-list {
+  display: flex;
+
   list-style: none;
 }
 
 .feature-main {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-
   text-transform: uppercase;
 }
 
 .feature-description {
   font-size: 14px;
   line-height: 1.71;
-
   color: var(--secondary-text-color);
 }
 
+.feature-item {
+  flex-basis: calc((100% - 30px * 3) / 4);
+}
+
+.feature-item + .feature-item {
+  margin-left: 30px;
+}
+
 /*  <!--Чим ми займаємося--> */
+.box.section {
+  padding-top: 0;
+}
+
 .box-titel {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -150,40 +241,67 @@ body {
 }
 
 .box-list {
+  display: flex;
+
   list-style: none;
+}
+
+.box-item {
+  flex-basis: calc(((100% - var(--item-gap)) * 2) / 3);
+  max-width: 100%;
+}
+
+.box-item + .box-item {
+  margin-left: var(--item-gap);
 }
 
 /* <!--Наша команда--> */
 .team {
   background-color: var(--secondary-bg-color);
-}
-
-.team-titel {
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
 }
 
+.team-titel {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
 .team-list {
+  display: flex;
+
   list-style: none;
 }
 
 .team-item {
+  flex-basis: calc((100% - var(--item-gap) * 3) / 4);
+  max-width: 100%;
+
   background-color: var(--primary-bg-color);
 }
 
+.team-item + .team-item {
+  margin-left: var(--item-gap);
+}
+
+.team-gap {
+  padding: 30px;
+}
+
 .team-members {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 }
 
 .team-positions {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 
   color: var(--secondary-text-color);
 }
@@ -192,6 +310,15 @@ body {
 .filter-list,
 .portfolio-list {
   list-style: none;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filter-item + .filter-item {
+  margin-left: 8px;
 }
 
 .filter-button {
@@ -206,6 +333,11 @@ body {
   background-color: var(--secondary-bg-color);
 
   cursor: pointer;
+
+  padding: 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+  min-width: 73px;
 }
 
 .filter-button:hover,
@@ -213,12 +345,27 @@ body {
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
 }
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--item-gap);
+}
+
+.portfolio-item {
+  flex-basis: calc((100% - 2 * var(--item-gap)) / 3);
+  border: 1px solid #eeeeee;
+}
 
 .portfolio-ref {
   text-decoration: none;
 }
 
+.portfolio-gap {
+  padding: 20px 24px;
+}
 .portfolio-project {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -232,16 +379,27 @@ body {
 }
 
 /* -------------Підвал---------- */
-.footer .logo {
-  color: var(--primary-bg-color);
-}
-
 .footer {
+  padding: 60px 0;
+
   background-color: var(--footer-color);
 }
 
+.footer .logo {
+  display: block;
+  margin-bottom: 20px;
+
+  color: var(--primary-bg-color);
+}
+
 .address {
+  display: block;
+
   list-style: none;
+}
+
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .map,
