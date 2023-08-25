@@ -1,0 +1,38 @@
+.feature__list {
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+}
+
+.feature__item {
+  flex-basis: calc((100% - 3 * $item-gap) / 4);
+}
+
+.feature__wrapper {
+  height: 120px;
+  margin-bottom: $item-gap;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+  background-color: $secondary-bg-color;
+}
+
+.feature__issue {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.feature__description {
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: $secondary-text-color;
+}

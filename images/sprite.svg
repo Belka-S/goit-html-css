@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" overflow="hidden" style="position:absolute;width:0;height:0">
   <defs>
     <symbol id="modal-close" viewBox="0 0 32 32">
@@ -5,6 +6,16 @@
     </symbol>
 <<<<<<< HEAD
 =======
+=======
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <symbol id="modal-checkbox" viewBox="0 0 32 32">
+      <path stroke-width=".427" d="m6.308 15.47-.147-.14-2.205 2.088 7.767 7.41L28.041 9.261l-2.19-2.089-14.128 13.465-5.416-5.167z"/>
+    </symbol>
+    <symbol id="modal-close" viewBox="0 0 32 32">
+      <path d="m26.667 7.303-1.97-1.97-7.808 7.808-7.808-7.808-1.97 1.97 7.808 7.808-7.808 7.808 1.97 1.97 7.808-7.808 7.808 7.808 1.97-1.97-7.808-7.808 7.808-7.808z"/>
+    </symbol>
+>>>>>>> 2dee6225f31905b0e2747bfcb29bf0c8e9109e8c
     <symbol id="modal-mail" viewBox="0 0 32 32">
       <path d="M26.667 5.333H5.334A2.663 2.663 0 0 0 2.681 8l-.013 16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667V8c0-1.467-1.2-2.667-2.667-2.667zM26.133 11l-9.427 5.893a1.346 1.346 0 0 1-1.413 0L5.866 11a1.132 1.132 0 1 1 1.2-1.92l8.933 5.587 8.933-5.587a1.132 1.132 0 1 1 1.2 1.92z"/>
     </symbol>
@@ -17,7 +28,10 @@
     <symbol id="send" viewBox="0 0 32 32">
       <path d="M32 0 0 18l10.227 3.788L26 7 14.002 23.186l.01.004-.012-.004V32l5.735-6.691L27 28l5-28z"/>
     </symbol>
+<<<<<<< HEAD
 >>>>>>> 90768af74a21fd39ecca6d577ccc2ec8996fa3e0
+=======
+>>>>>>> 2dee6225f31905b0e2747bfcb29bf0c8e9109e8c
     <symbol id="social-facebook" viewBox="0 0 32 32">
       <path d="M21.328 5.312h2.923V.224A36.478 36.478 0 0 0 20.144 0h-.157.008c-4.213 0-7.099 2.65-7.099 7.52V12H8.25v5.688h4.646V32h5.699V17.69h4.459l.709-5.688h-5.17V8.08c0-1.643.443-2.768 2.734-2.768z"/>
     </symbol>
