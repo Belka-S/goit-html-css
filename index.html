@@ -352,7 +352,7 @@
     <!--Підвал-->
     <footer class="footer">
         <div class="container">
-            <div class="address-column">
+            <div class="address">
                 <a class="logo" href="./index.html"><span class="accent">Web</span>Studio</a>
                 <address>
                     <ul class="address-list">
@@ -366,8 +366,8 @@
                     </ul>
                 </address>
             </div>
-            <div class="join-column">
-                <h2 class="join-titel">Приєднуйтесь</h2>
+            <div class="join">
+                <p class="join-titel">Приєднуйтесь</p>
                 <ul class="social-list">
                     <li>
                         <a class="social-link dark" href="#" target="_blank" rel="noopener noreferrer nofollow"
@@ -403,12 +403,61 @@
                     </li>
                 </ul>
             </div>
+            <div class="subscription">
+                <p class="subscription-titel">Підпишіться на розсилку</p>
+                <form class="subscription-form js-speaker-form">
+                    <label for="subscription-email"></label>
+                    <input type="email" name="email" id="subscription-email" placeholder="E-mail" autocomplete="off">
+                    <button class="subscription-button" type="submit">Підписатися
+                        <svg class="subscription-icon">
+                            <use href="./images/sprite.svg#send"></use>
+                        </svg>
+                    </button>
+
+                </form>
+            </div>
         </div>
     </footer>
     <!-- Модальне вікно -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="modal-button" data-modal-close>
+            <h2 class="modal-titel">Залиште свої дані, ми вам передзвонимо</h2>
+            <form class="modal-form js-speaker-form">
+                <div class="modal-container">
+                    <label for="name">Ім'я</label>
+                    <input type="text" name="name" id="name">
+                    <svg class="modal-name-icon">
+                        <use href="./images/sprite.svg#modal-name"></use>
+                    </svg>
+                </div>
+                <div class="modal-container">
+                    <label for="tel">Телефон</label>
+                    <input type="tel" name="tel" id="tel">
+                    <svg class="modal-phone-icon">
+                        <use href="./images/sprite.svg#modal-phone"></use>
+                    </svg>
+                </div>
+                <div class="modal-container">
+                    <label for="modal-email">Пошта</label>
+                    <input type="email" name="email" id="modal-email">
+                    <svg class="modal-mail-icon">
+                        <use href="./images/sprite.svg#modal-mail"></use>
+                    </svg>
+                </div>
+                <div class="modal-container">
+                    <label for="comment">Коментар</label>
+                    <textarea name="comment" id="comment" rows="7" placeholder="Введіть текст"></textarea>
+                </div>
+                <label class="modal-checkbox">
+                    <input class="modal-checkbox-input visually-hidden" type="checkbox" name="agreement"
+                        value="agreement">
+                    <span class="modal-chechkbox-icon"></span>
+                    <span>Погоджуюся з розсилкою та приймаю </span>
+                    <a href="#">Умови договору</a>
+                </label>
+                <button class="modal-form-button" type="submit">Відправити</button>
+            </form>
+            <button class="modal-close-button" data-modal-close>
                 <svg class="modal-close">
                     <use href="./images/sprite.svg#modal-close"></use>
                 </svg>
@@ -416,6 +465,19 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <!-- Перевірка форм через консоль -->
+    <script>
+        (() => {
+            document
+                .querySelector('.js-speaker-form')
+                .addEventListener('submit', e => {
+                    e.preventDefault();
+                    new FormData(e.currentTarget).forEach((value, name) =>
+                        console.log(`${name}: ${value}`)
+                    );
+                });
+        })();
+    </script>
 </body>
 
 </html>

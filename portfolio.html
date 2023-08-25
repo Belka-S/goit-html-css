@@ -175,20 +175,21 @@
   <!--Підвал-->
   <footer class="footer">
     <div class="container">
-      <div class="address-column">
+      <div class="address">
         <a class="logo" href="./index.html"><span class="accent">Web</span>Studio</a>
         <address>
           <ul class="address-list">
             <li class="address-item"><a class="map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
-                rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a></li>
+                rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a>
+            </li>
             <li class="address-item"><a class="tel-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
             <li class="address-item"><a class="tel-mail" href="tel:+380961111111">+38 096 111 11 11</a></li>
           </ul>
         </address>
       </div>
-      <div class="join-column">
-        <h2 class="join-titel">Приєднуйтесь</h2>
+      <div class="join">
+        <p class="join-titel">Приєднуйтесь</p>
         <ul class="social-list">
           <li>
             <a class="social-link dark" href="#" target="_blank" rel="noopener noreferrer nofollow"
@@ -223,6 +224,19 @@
             </a>
           </li>
         </ul>
+      </div>
+      <div class="subscription">
+        <p class="subscription-titel">Підпишіться на розсилку</p>
+        <form class="subscription-form js-speaker-form">
+          <label for="subscription-email"></label>
+          <input type="email" name="email" id="subscription-email" placeholder="E-mail" autocomplete="off">
+          <button class="subscription-button" type="submit">Підписатися
+            <svg class="subscription-icon">
+              <use href="./images/sprite.svg#send"></use>
+            </svg>
+          </button>
+
+        </form>
       </div>
     </div>
   </footer>

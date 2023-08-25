@@ -79,6 +79,50 @@ img {
   padding: 94px 0;
 }
 
+/* ---------------Button--------------- */
+
+.hero-button,
+.modal-form-button,
+.subscription-button {
+  padding: 10px 32px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+  text-align: center;
+  border: transparent;
+  border-radius: 4px;
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+
+  transition: background-color 250ms var(--timing-futction), box-shadow 250ms var(--timing-futction);
+}
+
+.hero-button {
+  min-width: 216px;
+}
+
+.modal-form-button,
+.subscription-button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-button:hover,
+.hero-button:focus,
+.modal-form-button:hover,
+.modal-form-button:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 /* ---------------Social--------------- */
 
 .social-list {
@@ -122,8 +166,6 @@ img {
 /* --------Верхня_лінія-------- */
 
 .top-line {
-  /* padding-top: 24px;
-  padding-bottom: 25px; */
   border-bottom: 1px solid #ececec;
 }
 
@@ -302,32 +344,6 @@ img {
   text-transform: uppercase;
 
   color: var(--primary-bg-color);
-}
-
-.hero-button {
-  min-width: 216px;
-  padding: 10px 32px;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-
-  cursor: pointer;
-  text-align: center;
-  border: transparent;
-  border-radius: 4px;
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-
-  transition: background-color 250ms var(--timing-futction), box-shadow 250ms var(--timing-futction);
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* <!--Особливості--> */
@@ -681,7 +697,7 @@ img {
   display: flex;
   align-items: baseline;
 }
-.address-column {
+.address {
   margin-right: 70px;
 }
 
@@ -727,7 +743,12 @@ img {
   color: var(--footer-contacts-color);
 }
 
-.join-titel {
+.join {
+  margin-right: 93px;
+}
+
+.join-titel,
+.subscription-titel {
   margin-bottom: 20px;
 
   text-transform: uppercase;
@@ -736,6 +757,38 @@ img {
   line-height: 1.14;
 
   color: var(--primary-bg-color);
+}
+
+.subscription-form {
+  display: flex;
+}
+
+.subscription-form input {
+  margin-right: 12px;
+  padding: 14px 16px;
+  min-width: 358px;
+
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms var(--timing-futction);
+}
+
+.subscription-form input:focus {
+  border-color: var(--accent-color);
+}
+
+.subscription-icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: var(--primary-bg-color);
 }
 
 /* <!-- Модальне вікно --> */
@@ -765,8 +818,10 @@ img {
 
   width: 528px;
   height: 581px;
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1, 1);
 
+  border-radius: 4px;
   background-color: var(--primary-bg-color);
   transition: transform 250ms var(--timing-futction);
 }
@@ -775,7 +830,120 @@ img {
   transform: translate(-50%, -50%) scale(2, 1.2);
 }
 
-.modal-button {
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-titel {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.modal-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
+}
+
+.modal-container:last-of-type {
+  margin-bottom: 20px;
+}
+
+.modal-container label {
+  margin-bottom: 4px;
+}
+
+.modal-container input {
+  padding: 12px 12px 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color 250ms var(--timing-futction);
+}
+
+.modal-container input:focus,
+.modal-container textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-name-icon,
+.modal-phone-icon,
+.modal-mail-icon {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+
+  fill: var(--primary-text-color);
+  transition: fill 250ms var(--timing-futction);
+}
+
+.modal-container input:focus + svg {
+  fill: var(--accent-color);
+}
+
+.modal-container textarea {
+  resize: none;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  /* color: rgba(117, 117, 117, 0.5); */
+  transition: border-color 250ms var(--timing-futction);
+}
+
+.modal-checkbox {
+  margin-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+
+  white-space: pre;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: var(--main-letter-spacing);
+  color: var(--secondary-text-color);
+}
+
+.modal-chechkbox-icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 1px solid var(--logo-black-color);
+  border-radius: 2px;
+  transition: border-color 250ms var(--timing-futction),
+    background-color 250ms var(--timing-futction);
+}
+
+.modal-checkbox-input:checked + .modal-chechkbox-icon {
+  background-origin: border-box;
+  background-image: url('../images/modal-checkbox.svg');
+  background-size: contain;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.modal-checkbox a {
+  color: var(--accent-color);
+}
+
+.modal-close-button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -783,14 +951,23 @@ img {
   width: 30px;
   height: 30px;
   display: flex;
+  padding: 0;
   align-items: center;
   justify-content: center;
-  padding: 0;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-bg-color);
 }
+
+.modal-close-button:hover .modal-close {
+  fill: var(--accent-color);
+}
+
 .modal-close {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
   width: 18px;
   height: 18px;
 }
