@@ -62,7 +62,7 @@
 
     &::after {
       position: absolute;
-      bottom: -1px;
+      bottom: 30px;
       right: 0;
 
       width: 0;
@@ -88,7 +88,7 @@
 
     &--current::after {
       position: absolute;
-      bottom: -1px;
+      bottom: 30px;
       left: 0;
 
       height: 4px;
